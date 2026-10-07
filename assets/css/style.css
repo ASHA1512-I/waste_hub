@@ -1,0 +1,494 @@
+:root {
+    --bs-body-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --page: #f2f5eb;
+    --surface: #ffffff;
+    --ink: #272d29;
+    --muted: #626b63;
+    --line: #d8dfd0;
+    --lime: #b6df35;
+    --lime-dark: #627d12;
+    --lime-pale: #edf5d5;
+    --graphite: #272d29;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--page);
+    color: var(--ink);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-light {
+    background-color: var(--page) !important;
+}
+
+.navbar.bg-success {
+    background-color: var(--graphite) !important;
+}
+
+.bg-success:not(.navbar) {
+    background-color: var(--lime-dark) !important;
+}
+
+.text-success {
+    color: var(--lime-dark) !important;
+}
+
+.btn-success {
+    --bs-btn-color: var(--graphite);
+    --bs-btn-bg: var(--lime);
+    --bs-btn-border-color: var(--lime);
+    --bs-btn-hover-color: var(--graphite);
+    --bs-btn-hover-bg: #a3ca2d;
+    --bs-btn-hover-border-color: #a3ca2d;
+    --bs-btn-active-color: var(--graphite);
+    --bs-btn-active-bg: #91b822;
+    --bs-btn-active-border-color: #91b822;
+}
+
+.btn-light.text-success {
+    color: var(--graphite) !important;
+}
+
+.site-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.auth-logo {
+    width: 132px;
+    height: 132px;
+    object-fit: contain;
+}
+
+.auth-page {
+    background: #fff;
+}
+
+.auth-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    min-height: 100vh;
+}
+
+.auth-visual {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: clamp(2.5rem, 6vw, 6rem);
+    color: #fff;
+    background-image:
+        linear-gradient(180deg, rgba(39, 45, 41, 0.08) 10%, rgba(39, 45, 41, 0.82) 100%),
+        url("../../images/Waste pickers on landfill copy.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.auth-visual::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 28%;
+    background: rgba(39, 45, 41, 0.9);
+    clip-path: polygon(43% 42%, 100% 0, 100% 100%, 0 100%);
+    content: "";
+}
+
+.auth-visual-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 42rem;
+}
+
+.auth-kicker,
+.auth-eyebrow {
+    margin-bottom: 1rem;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.auth-kicker {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #fff;
+}
+
+.auth-kicker span {
+    width: 0.55rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--lime);
+}
+
+.auth-visual h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 750;
+    line-height: 1.03;
+}
+
+.auth-visual h1 span {
+    color: var(--lime);
+}
+
+.auth-visual-caption {
+    max-width: 27rem;
+    margin: 1.5rem 0 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.95rem;
+}
+
+.auth-panel {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem clamp(2rem, 6vw, 6.5rem);
+    background: #fff;
+}
+
+.auth-form-wrap {
+    width: 100%;
+    max-width: 34rem;
+}
+
+.auth-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 3.1rem;
+    color: var(--muted);
+    font-size: 0.84rem;
+    text-decoration: none;
+}
+
+.auth-back:hover,
+.auth-register a,
+.auth-legal a {
+    color: var(--lime-dark);
+}
+
+.auth-eyebrow {
+    margin-bottom: 0.55rem;
+}
+
+.auth-panel h2 {
+    margin: 0;
+    color: var(--graphite);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.auth-intro {
+    margin: 0.45rem 0 1.8rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.auth-role-picker {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.25rem;
+    margin: 0 0 1.65rem;
+    padding: 0.3rem;
+    border: 1px solid #e5eae3;
+    border-radius: 6px;
+    background: #f5f7f3;
+}
+
+.auth-role-option {
+    display: grid;
+    min-height: 3rem;
+    place-items: center;
+    padding: 0.4rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #728078;
+    cursor: pointer;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.auth-role-option:has(input:checked) {
+    border-color: var(--lime);
+    background: var(--lime-pale);
+    box-shadow: 0 1px 4px rgba(31, 50, 38, 0.08);
+    color: var(--graphite);
+    font-weight: 700;
+}
+
+.auth-role-option:focus-within {
+    outline: 2px solid #627d12;
+    outline-offset: 2px;
+}
+
+.auth-field {
+    margin-bottom: 1.15rem;
+}
+
+.auth-field > label {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: #3e4c43;
+    font-size: 0.8rem;
+    font-weight: 650;
+}
+
+.auth-field .form-control {
+    min-height: 3.35rem;
+    padding: 0.8rem 0.9rem;
+    border-color: #dfe5dd;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.auth-field .form-control::placeholder {
+    color: #a0aaa2;
+}
+
+.auth-password-wrap {
+    position: relative;
+}
+
+.auth-password-wrap .form-control {
+    padding-right: 4.5rem;
+}
+
+.auth-password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0.9rem;
+    padding: 0.25rem 0;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    color: var(--lime-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.auth-submit {
+    display: flex;
+    width: 100%;
+    min-height: 3.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.65rem;
+    padding: 0 1rem;
+    border: 0;
+    border-radius: 5px;
+    background: var(--lime);
+    color: var(--graphite);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.auth-submit:hover {
+    background: #a3ca2d;
+}
+
+.auth-register {
+    margin: 1.3rem 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.auth-register a,
+.auth-legal a {
+    margin-left: 0.35rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-legal {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5eae3;
+    font-size: 0.75rem;
+}
+
+.auth-legal a {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+    .auth-visual h1 {
+        font-size: 3.5rem;
+    }
+}
+
+.hero {
+    min-height: 430px;
+    display: grid;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background:
+        linear-gradient(rgba(25, 39, 47, 0.76), rgba(25, 39, 47, 0.76)),
+        url("../../images/Waste pickers on landfill copy.jpg") center 48% / cover;
+}
+
+.feature-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.feature-item h4 {
+    margin-top: 1rem;
+    color: var(--ink);
+}
+
+.feature-item p {
+    color: var(--muted);
+}
+
+.card {
+    border-color: var(--line);
+    background-color: var(--surface);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--lime-dark);
+    box-shadow: 0 0 0 0.2rem rgba(182, 223, 53, 0.28);
+}
+
+.sidebar {
+    min-height: calc(100vh - 56px);
+    background-color: #e8eddf;
+    border-right: 1px solid var(--line);
+}
+
+.sidebar a {
+    display: block;
+    padding: 0.85rem 1rem;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    color: var(--graphite);
+    background-color: var(--lime-pale);
+}
+
+.legal-content {
+    max-width: 54rem;
+}
+
+.cookie-banner {
+    position: fixed;
+    z-index: 1080;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 1rem 1.25rem;
+    color: #fff;
+    background: var(--graphite);
+    border-top: 4px solid var(--lime);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.22);
+}
+
+.cookie-banner a {
+    color: var(--lime);
+}
+
+.cookie-banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.cookie-banner__content p {
+    margin: 0;
+}
+
+.cookie-banner__actions {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 0.5rem;
+}
+
+.cookie-banner__actions button {
+    padding: 0.55rem 0.8rem;
+    color: var(--graphite);
+    background: var(--lime);
+    border: 1px solid var(--lime);
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.cookie-banner__actions button:last-child {
+    color: #fff;
+    background: transparent;
+    border-color: #9ba29d;
+}
+
+@media (max-width: 767.98px) {
+    .auth-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-visual {
+        min-height: 42vh;
+        padding: 2rem 1.5rem;
+    }
+
+    .auth-visual h1 {
+        font-size: 3rem;
+    }
+
+    .auth-visual-caption {
+        max-width: 22rem;
+        margin-top: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .auth-panel {
+        min-height: auto;
+        padding: 2.25rem 1.5rem 3rem;
+    }
+
+    .auth-back {
+        margin-bottom: 2rem;
+    }
+
+    .auth-panel h2 {
+        font-size: 1.7rem;
+    }
+
+    .sidebar {
+        min-height: 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .cookie-banner__content {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .cookie-banner__actions button {
+        flex: 1;
+    }
+}
